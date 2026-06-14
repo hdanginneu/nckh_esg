@@ -1,0 +1,9 @@
+project:
+  name: "Climate Risk and Bank Stability"
+  
+model:
+  winsorize_limits: [0.01, 0.01]
+  target_variables: ["NPL_ratio", "Z_score"]
+  climate_variables: ["HEAT_DAYS", "TMAX_AVG", "HEAT_SHOCK_DUMMY"]
+  control_variables: ["SIZE", "CAR", "NIM", "ROA_annual", "LTD", "LIQ"]
+  lag_years: [1, 2]

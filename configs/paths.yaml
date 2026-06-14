@@ -1,0 +1,12 @@
+data:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+outputs:
+  tables: outputs/tables
+  figures: outputs/figures
+  reports: outputs/reports
+models:
+  econometrics: models/econometrics
+  xgboost: models/xgboost
+  shap: models/shap

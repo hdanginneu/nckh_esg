@@ -158,11 +158,11 @@ graph TD
 
 ### 3.1. Chỉ số rủi ro phá sản (Z-score)
 Đại diện cho sự ổn định tài chính tổng thể của ngân hàng (khoảng cách đến khả năng vỡ nợ):
-$$Z_score(i,t) = [ROA\annual(i,t) + ETA\ratio(i,t) × 100] / ROA_sd3(i,t)$$
+$$Z\_score_{i,t} = \frac{ROA\_annual_{i,t} + ETA\_ratio_{i,t} \times 100}{ROA\_sd3_{i,t}}$$
 
-Trong đó:
-* ROA_annual: Tỷ suất sinh lời trung bình năm của tài sản (%).
-* ETA_ratio * 100: Tỷ lệ vốn chủ sở hữu trên tổng tài sản (Equity-to-Total-Assets, EQTOT/ASSET_avg) quy đổi về đơn vị phần trăm — đại diện cho phần đệm vốn thực tế ngân hàng dùng để hấp thụ lỗ.
+*Trong đó:*
+* `ROA_annual`: Tỷ suất sinh lời trung bình năm của tài sản (%).
+* `ETA_ratio * 100`: Tỷ lệ vốn chủ sở hữu trên tổng tài sản (`EQTOT / ASSET_avg`) quy đổi về đơn vị phần trăm — đại diện cho phần đệm vốn thực tế ngân hàng dùng để hấp thụ lỗ. **Lưu ý:** `CAR` (Capital Adequacy Ratio) là khái niệm khác (Tier 1 / Risk-Weighted Assets theo chuẩn Basel), không dùng trong công thức Z-score mà được giữ riêng làm biến kiểm soát.
 * `ROA_sd3`: Độ lệch chuẩn của chỉ số ROA tính trên cửa sổ trượt 3 năm gần nhất nhằm đại diện cho mức độ biến động lợi nhuận ngân hàng.
 * `ln_Zscore`: Logarit tự nhiên của Z-score để phân phối biến tiệm cận phân phối chuẩn trong mô hình OLS.
 

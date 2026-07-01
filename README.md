@@ -24,10 +24,10 @@ Cấu trúc các biến trong bộ dữ liệu nghiên cứu thực tế (`final
   - `NPL_na_annual`: Tài sản nợ không sinh lời (nonaccrual).
   - `ASSET_avg`: Tổng tài sản bình quân năm của ngân hàng.
 - `Z_score` (Chỉ số an toàn): Đo lường khoảng cách đến khả năng vỡ nợ, được tính bằng công thức:
-  $$Z\_score_{i,t} = \frac{ROA\_annual_{i,t} + CAR\_ratio_{i,t} \times 100}{ROA\_sd3_{i,t}}$$
+  $$Z\_score_{i,t} = \frac{ROA\_annual_{i,t} + ETA\_ratio_{i,t} \times 100}{ROA\_sd3_{i,t}}$$
   Trong đó:
   - `ROA_annual`: Tỷ suất sinh lời trung bình năm trên tổng tài sản (%).
-  - `CAR_ratio`: Tỷ lệ an toàn vốn trên tổng tài sản dạng thập phân (Vốn chủ sở hữu / Tổng tài sản).
+  - `ETA_ratio`: Tỷ lệ vốn chủ sở hữu trên tổng tài sản dạng thập phân (`EQTOT / ASSET_avg`). **Lưu ý:** đây KHÔNG phải `CAR_ratio` (Capital Adequacy Ratio) — `CAR` được giữ riêng làm biến kiểm soát cấp ngân hàng, không xuất hiện trong công thức Z-score.
   - `ROA_sd3`: Độ lệch chuẩn của ROA tính trên cửa sổ trượt 3 năm gần nhất.
 - `ln_Zscore`: Logarit tự nhiên của Z-score để phân phối biến tiệm cận phân phối chuẩn.
 

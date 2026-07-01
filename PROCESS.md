@@ -95,7 +95,7 @@ graph TD
 * **Chi tiết thực hiện:**
   1. **Biến phụ thuộc Y:**
      * `NPL_ratio`: Tính tỷ lệ nợ xấu trên tổng tài sản trung bình (%).
-     * `Z_score`: Tính khoảng cách đến vỡ nợ bằng công cụ $(ROA + CAR) / Std(ROA)$. Trong đó độ lệch chuẩn của ROA được tính trên cửa sổ trượt 3 năm gần nhất. Lấy Logarit tự nhiên (`ln_Zscore`) để chuẩn hóa phân phối.
+     * `Z_score`: Tính khoảng cách đến vỡ nợ bằng công thức $Z = (ROA + ETA) / Std(ROA)$, trong đó `ETA` là tỷ lệ vốn chủ sở hữu trên tổng tài sản (`EQTOT / ASSET_avg`). Độ lệch chuẩn của ROA được tính trên cửa sổ trượt 3 năm gần nhất. Lấy Logarit tự nhiên (`ln_Zscore`) để chuẩn hóa phân phối.
   2. **Biến độc lập X (Khí hậu):**
      * `HEAT_SHOCK_DAYS`: Tổng số ngày trong năm t có nhiệt độ vượt ngưỡng P90 lịch sử của khu vực.
      * `HEAT_SHOCK_INTENSITY`: Cường độ của cú sốc nhiệt.
